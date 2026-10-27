@@ -1,0 +1,17 @@
+# @koda-ai42/dsh-compaction-settings — override the context-compaction policy.
+#
+# This row owns the five values. They are volatile, so the Settings ▸ Compaction
+# page (and a hand-edit of the profile's cordis.patch.yml) changes them without
+# a restart; the Host half pushes them onto the live compaction engine.
+#
+# The values below are the plugin's defaults. A write from the Settings page
+# lands in the profile's own cordis.patch.yml and shadows this layer.
+- insert:
+    - id: compaction-settings
+      name: '@koda-ai42/dsh-compaction-settings'
+      config:
+        auto: true
+        thresholdRatio: 0.8
+        retainRatio: 0.16
+        headroomTokens: 8192
+        maxTokens: 8192

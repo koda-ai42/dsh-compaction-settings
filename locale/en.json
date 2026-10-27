@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Compaction Settings",
+    "description": "Settings page that overrides the context-compaction policy — auto, thresholdRatio, retainRatio, headroomTokens and maxTokens — and applies it without a restart."
+  }
+}
